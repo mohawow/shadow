@@ -6,7 +6,7 @@ import ListGroup from "./common/listGroup";
 import Pagination from "./common/pagination";
 import { getTrips, deleteTrip } from "../services/tripService";
 import { getShifts } from "../services/shiftService";
-import { paginate } from "../utils/paginate";
+// import { paginate } from "../utils/paginate";
 import _ from "lodash";
 import SearchBox from "./searchBox";
 
@@ -88,7 +88,7 @@ class Trips extends Component {
 
     const sorted = _.orderBy(filtered, [sortColumn.path], [sortColumn.order]);
 
-    const trips = paginate(sorted, currentPage, pageSize);
+    // const trips = paginate(sorted, currentPage, pageSize);
 
     return { totalCount: filtered.length, data: trips };
   };

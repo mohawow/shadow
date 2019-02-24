@@ -91,5 +91,4 @@ class TripForm extends Form {
   }
 }
 
-
 export default TripForm;
