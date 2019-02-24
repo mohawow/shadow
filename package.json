@@ -9,12 +9,16 @@
     "joi-browser": "^13.4.0",
     "jwt-decode": "^2.2.0",
     "lodash": "^4.17.10",
+    "merge": "^1.2.1",
     "prop-types": "^15.6.2",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
+    "react": "^16.8.3",
+    "react-dev-utils": "^7.0.3",
+    "react-dom": "^16.8.3",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
-    "react-toastify": "^4.1.0"
+    "react-toastify": "^4.1.0",
+    "url-parse": "^1.4.4",
+    "webpack-dev-server": "^3.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

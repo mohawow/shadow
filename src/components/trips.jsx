@@ -6,9 +6,10 @@ import ListGroup from "./common/listGroup";
 import Pagination from "./common/pagination";
 import { getTrips, deleteTrip } from "../services/tripService";
 import { getShifts } from "../services/shiftService";
-// import { paginate } from "../utils/paginate";
+import  {paginate}  from "../utils/paginate";
 import _ from "lodash";
 import SearchBox from "./searchBox";
+
 
 class Trips extends Component {
   state = {
@@ -31,7 +32,7 @@ class Trips extends Component {
 
   handleDelete = async trip => {
     const originalTrips = this.state.trips;
-    const trips = originalTrips.filter(m => m._id !== trip._id);
+    const trips = originalTrips.filter(t => t._id !== trip._id);
     this.setState({ trips });
 
     try {
@@ -80,15 +81,15 @@ class Trips extends Component {
 
     let filtered = allTrips;
     if (searchQuery)
-      filtered = allTrips.filter(m =>
-        m.block.toLowerCase().startsWith(searchQuery.toLowerCase())
+      filtered = allTrips.filter(t =>
+        t.block.toLowerCase().startsWith(searchQuery.toLowerCase())
       );
     else if (selectedShift && selectedShift._id)
-      filtered = allTrips.filter(m => m.shift._id === selectedShift._id);
+      filtered = allTrips.filter(t => t.shift._id === selectedShift._id);
 
     const sorted = _.orderBy(filtered, [sortColumn.path], [sortColumn.order]);
 
-    // const trips = paginate(sorted, currentPage, pageSize);
+    const trips = paginate(sorted, currentPage, pageSize);
 
     return { totalCount: filtered.length, data: trips };
   };
