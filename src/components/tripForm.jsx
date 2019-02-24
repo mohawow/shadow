@@ -1,0 +1,95 @@
+import React from "react";
+import Joi from "joi-browser";
+import Form from "./common/form";
+import { getTrip, saveTrip } from "../services/tripService";
+import { getShifts } from "../services/shiftService";
+
+class TripForm extends Form {
+  state = {
+    data: {
+      block: "",
+      shiftId: "",
+      numberOfPackages: "",
+      numberOfStops: ""
+    },
+    shifts: [],
+    errors: {}
+  };
+
+  schema = {
+    _id: Joi.string(),
+    block: Joi.string()
+      .required()
+      .label("Block"),
+    shiftId: Joi.string()
+      .required()
+      .label("Shift"),
+    numberOfPackages: Joi.number()
+      .required()
+      .min(0)
+      .max(100)
+      .label("Number in Packages"),
+    numberOfStops: Joi.number()
+      .required()
+      .min(0)
+      .max(10)
+      .label("Stops")
+  };
+
+  async populateShifts() {
+    const { data: shifts } = await getShifts();
+    this.setState({ shifts });
+  }
+
+  async populateTrip() {
+    try {
+      const tripId = this.props.match.params.id;
+      if (tripId === "new") return;
+
+      const { data: trip } = await getTrip(tripId);
+      this.setState({ data: this.mapToViewModel(trip) });
+    } catch (ex) {
+      if (ex.response && ex.response.status === 404)
+        this.props.history.replace("/not-found");
+    }
+  }
+
+  async componentDidMount() {
+    await this.populateShifts();
+    await this.populateTrip();
+  }
+
+  mapToViewModel(trip) {
+    return {
+      _id: trip._id,
+      block: trip.block,
+      shiftId: trip.shift._id,
+      numberOfPackages: trip.numberOfPackages,
+      numberOfStops: trip.numberOfStops
+    };
+  }
+
+  doSubmit = async () => {
+    await saveTrip(this.state.data);
+
+    this.props.history.push("/trips");
+  };
+
+  render() {
+    return (
+      <div>
+        <h1>Trip Form</h1>
+        <form onSubmit={this.handleSubmit}>
+          {this.renderInput("block", "Block")}
+          {this.renderSelect("shiftId", "Shift", this.state.shifts)}
+          {this.renderInput("numberOfPackages", "Number in Packages", "number")}
+          {this.renderInput("numberOfStops", "Stops")}
+          {this.renderButton("Save")}
+        </form>
+      </div>
+    );
+  }
+}
+
+
+export default TripForm;
