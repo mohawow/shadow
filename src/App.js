@@ -3,8 +3,6 @@ import { Route, Redirect, Switch } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import Trips from "./components/trips";
 import TripForm from "./components/tripForm";
-import Tips from "./components/tips";
-import Reports from "./components/reports";
 import NotFound from "./components/notFound";
 import NavBar from "./components/navBar";
 import LoginForm from "./components/loginForm";
@@ -29,24 +27,22 @@ class App extends Component {
     return (
       <React.Fragment>
         <ToastContainer />
-        <NavBar user={user} />
-        <main className="container">
-          <Switch>
-            <Route path="/register" component={RegisterForm} />
-            <Route path="/login" component={LoginForm} />
-            <Route path="/logout" component={Logout} />
-            <ProtectedRoute path="/trips/:id" component={TripForm} />
-            <Route
-              path="/trips"
-              render={props => <Trips {...props} user={this.state.user} />}
-            />
-            <Route path="/tips" component={Tips} />
-            <Route path="/reports" component={Reports} />
-            <Route path="/not-found" component={NotFound} />
-            <Redirect from="/" exact to="/trips" />
-            <Redirect to="/not-found" />
-          </Switch>
-        </main>
+          <NavBar user={user} />
+            <main className="container">
+              <Switch>
+                <Route path="/register" component={RegisterForm} />
+                <Route path="/login" component={LoginForm} />
+                <Route path="/logout" component={Logout} />
+                <ProtectedRoute path="/trips/:id" component={TripForm} />
+                <Route
+                  path="/trips"
+                  render={props => <Trips {...props} user={this.state.user} />}
+                />
+                <Route path="/not-found" component={NotFound} />
+                <Redirect from="/" exact to="/trips" />
+                <Redirect to="/not-found" />
+              </Switch>
+            </main>
       </React.Fragment>
     );
   }

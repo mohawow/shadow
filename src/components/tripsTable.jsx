@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Table from "./common/table";
 import Like from "./common/like";
 
+
 class TripsTable extends Component {
   columns = [
     {

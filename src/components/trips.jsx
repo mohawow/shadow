@@ -102,7 +102,7 @@ class Trips extends Component {
 
     return (
       <div className="row">
-        <div className="col-3">
+        <div className="col-2">
           <ListGroup
             items={this.state.shifts}
             selectedItem={this.state.selectedShift}
@@ -114,7 +114,7 @@ class Trips extends Component {
             <Link
               to="/trips/new"
               className="btn btn-primary"
-              style={{ marginBottom: 20 }}
+              style={{ marginBottom: 10 }}
             >
               New Trip
             </Link>

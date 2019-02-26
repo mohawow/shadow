@@ -41,7 +41,7 @@ class TripForm extends Form {
       .min(0)
       .max(100)
       .label("Stops"),
-    initalPay: Joi.number()
+    initialPay: Joi.number()
       .required()
       .min(1)
       .max(1000)
@@ -111,7 +111,6 @@ class TripForm extends Form {
           {this.renderInput("numberOfStops", "Number OFn Stopss", "number")}
           {this.renderInput("initialPay", "Initial Pay", "number")}
           {this.renderInput("finalPay", "Final Pay", "number")}
-          {this.renderInput("tips", "tips", "number")}
           {this.renderButton("Save")}
         </form>
       </div>
