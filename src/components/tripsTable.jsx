@@ -11,9 +11,13 @@ class TripsTable extends Component {
       label: "Block",
       content: trip => <Link to={`/trips/${trip._id}`}>{trip.block}</Link>
     },
+    { path: "date", label: "Date" },
     { path: "shift.name", label: "Shift" },
     { path: "numberOfPackages", label: "Packages" },
     { path: "numberOfStops", label: "Stops" },
+    { path: "initialPay", label: "Initial Pay" },
+    { path: "finalPay", label: "Final Pay" },
+    { path: "tips", label: "tips" },
     {
       key: "like",
       content: trip => (

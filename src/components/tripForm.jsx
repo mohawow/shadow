@@ -87,7 +87,7 @@ class TripForm extends Form {
       shiftId: trip.shift._id,
       numberOfPackages: trip.numberOfPackages,
       numberOfStops: trip.numberOfStops,
-      initialPay: trip.intialPay,
+      initialPay: trip.initialPay,
       finalPay: trip.finalPay,
       tips: trip.tips
     };
