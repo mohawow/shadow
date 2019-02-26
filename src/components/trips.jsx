@@ -16,7 +16,7 @@ class Trips extends Component {
     trips: [],
     shifts: [],
     currentPage: 1,
-    pageSize: 4,
+    pageSize: 6,
     searchQuery: "",
     selectedShift: null,
     sortColumn: { path: "block", order: "asc" }

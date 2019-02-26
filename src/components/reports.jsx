@@ -1,7 +1,7 @@
 import React from "react";
 
 const Reports = () => {
-  return <h1>Rentals</h1>;
+  return <h1>Report</h1>;
 };
 
 
