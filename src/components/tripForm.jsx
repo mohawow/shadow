@@ -12,7 +12,7 @@ class TripForm extends Form {
       shiftId: "",
       numberOfPackages: "",
       numberOfStops: "",
-      initalPay: "",
+      initialPay: "",
       finalPay: "",
       tips: "",
     },
@@ -94,7 +94,9 @@ class TripForm extends Form {
   }
 
   doSubmit = async () => {
+    console.log(this.state.data);
     await saveTrip(this.state.data);
+    
 
     this.props.history.push("/trips");
   };
@@ -104,13 +106,14 @@ class TripForm extends Form {
       <div>
         <h1>Trip Form</h1>
         <form onSubmit={this.handleSubmit}>
-          {this.renderInput("block", "Block")}
+          {this.renderInput("block", "Block", "string")}
           {this.renderInput("date", "Date")}
           {this.renderSelect("shiftId", "Shift", this.state.shifts)}
           {this.renderInput("numberOfPackages", "Number Of Packages", "number")}
-          {this.renderInput("numberOfStops", "Number OFn Stopss", "number")}
+          {this.renderInput("numberOfStops", "Number Of Stops", "number")}
           {this.renderInput("initialPay", "Initial Pay", "number")}
           {this.renderInput("finalPay", "Final Pay", "number")}
+          {this.renderInput("tips", "Tips", "number")}
           {this.renderButton("Save")}
         </form>
       </div>

@@ -3,7 +3,6 @@ body {
   padding: 0 0 0 0;
   font-family: sans-serif;
 }
-
 .navbar {
   margin-bottom: 30px;
 }
@@ -12,8 +11,3 @@ body {
   cursor: pointer;
 }
 
-.navbar-nav .nav-link {
-  padding-right: 0;
-  padding-left: 0;
-  text-align: right;
- }
