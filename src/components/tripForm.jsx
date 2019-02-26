@@ -8,9 +8,13 @@ class TripForm extends Form {
   state = {
     data: {
       block: "",
+      date: "",
       shiftId: "",
       numberOfPackages: "",
-      numberOfStops: ""
+      numberOfStops: "",
+      initalPay: "",
+      finalPay: "",
+      tips: "",
     },
     shifts: [],
     errors: {}
@@ -21,6 +25,9 @@ class TripForm extends Form {
     block: Joi.string()
       .required()
       .label("Block"),
+    date: Joi.string()
+      .required()
+      .label("Date"),
     shiftId: Joi.string()
       .required()
       .label("Shift"),
@@ -28,12 +35,25 @@ class TripForm extends Form {
       .required()
       .min(0)
       .max(100)
-      .label("Number in Packages"),
+      .label("Packages"),
     numberOfStops: Joi.number()
       .required()
       .min(0)
+      .max(100)
+      .label("Stops"),
+    initalPay: Joi.number()
+      .required()
+      .min(1)
+      .max(1000)
+      .label("Initial Pay"),
+    finalPay: Joi.number()
+      .min(0)
       .max(10)
-      .label("Stops")
+      .label("Final Pay"),
+    tips: Joi.number()
+      .min(0)
+      .max(10)
+      .label("Tips")
   };
 
   async populateShifts() {
@@ -63,9 +83,13 @@ class TripForm extends Form {
     return {
       _id: trip._id,
       block: trip.block,
+      date:trip.date,
       shiftId: trip.shift._id,
       numberOfPackages: trip.numberOfPackages,
-      numberOfStops: trip.numberOfStops
+      numberOfStops: trip.numberOfStops,
+      initialPay: trip.intialPay,
+      finalPay: trip.finalPay,
+      tips: trip.tips
     };
   }
 
@@ -81,9 +105,13 @@ class TripForm extends Form {
         <h1>Trip Form</h1>
         <form onSubmit={this.handleSubmit}>
           {this.renderInput("block", "Block")}
+          {this.renderInput("date", "Date")}
           {this.renderSelect("shiftId", "Shift", this.state.shifts)}
-          {this.renderInput("numberOfPackages", "Number in Packages", "number")}
-          {this.renderInput("numberOfStops", "Stops")}
+          {this.renderInput("numberOfPackages", "Number Of Packages", "number")}
+          {this.renderInput("numberOfStops", "Number OFn Stopss", "number")}
+          {this.renderInput("initialPay", "Initial Pay", "number")}
+          {this.renderInput("finalPay", "Final Pay", "number")}
+          {this.renderInput("tips", "tips", "number")}
           {this.renderButton("Save")}
         </form>
       </div>
