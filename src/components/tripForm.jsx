@@ -33,13 +33,13 @@ class TripForm extends Form {
       .label("Shift"),
     numberOfPackages: Joi.number()
       .required()
-      .min(0)
+      .min(1)
       .max(100)
       .label("Packages"),
     numberOfStops: Joi.number()
       .required()
       .min(0)
-      .max(100)
+      .max(1000)
       .label("Stops"),
     initialPay: Joi.number()
       .required()
@@ -48,11 +48,11 @@ class TripForm extends Form {
       .label("Initial Pay"),
     finalPay: Joi.number()
       .min(0)
-      .max(10)
+      .max(1000)
       .label("Final Pay"),
     tips: Joi.number()
       .min(0)
-      .max(10)
+      .max(1000)
       .label("Tips")
   };
 

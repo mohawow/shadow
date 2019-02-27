@@ -42,7 +42,7 @@ class TripsTable extends Component {
   constructor() {
     super();
     const user = auth.getCurrentUser();
-    if (user && user.isAdmin) this.columns.push(this.deleteColumn);
+    if (user) this.columns.push(this.deleteColumn);
   }
 
   render() {
