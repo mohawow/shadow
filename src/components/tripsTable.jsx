@@ -42,18 +42,18 @@ class TripsTable extends Component {
   constructor() {
     super();
     const user = auth.getCurrentUser();
-    if (user) this.columns.push(this.deleteColumn);
+    if (user ) this.columns.push(this.deleteColumn);
   }
 
   render() {
     const { trips, onSort, sortColumn } = this.props;
     return (
-      <Table
-        columns={this.columns}
-        data={trips}
-        sortColumn={sortColumn}
-        onSort={onSort}
-      />
+        <Table
+          columns={this.columns}
+          data={trips}
+          sortColumn={sortColumn}
+          onSort={onSort}
+        />
     );
   }
 }

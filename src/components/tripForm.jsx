@@ -115,6 +115,7 @@ class TripForm extends Form {
           {this.renderInput("finalPay", "Final Pay", "number")}
           {this.renderInput("tips", "Tips", "number")}
           {this.renderButton("Save")}
+          
         </form>
       </div>
     );

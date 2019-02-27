@@ -114,7 +114,7 @@ class Trips extends Component {
             <Link
               to="/trips/new"
               className="btn btn-primary"
-              style={{ marginBottom: 20 }}
+              style={{ marginBottom: 18 }}
             >
               New Trip
             </Link>
