@@ -105,7 +105,7 @@ class TripForm extends Form {
     return (
       <div>
         <h1>Trip Form</h1>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} className="tripForm">
           {this.renderInput("block", "Block", "string")}
           {this.renderInput("date", "Date")}
           {this.renderSelect("shiftId", "Shift", this.state.shifts)}
