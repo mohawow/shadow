@@ -5,6 +5,7 @@ import Table from "./common/table";
 import Like from "./common/like";
 
 
+
 class TripsTable extends Component {
   columns = [
     {
@@ -32,7 +33,7 @@ class TripsTable extends Component {
     content: trip => (
       <button
         onClick={() => this.props.onDelete(trip)}
-        className="btn btn-danger btn-sm"
+        className="btn delete btn-danger btn-sm"
       >
         Delete
       </button>

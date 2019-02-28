@@ -11,6 +11,7 @@ import _ from "lodash";
 import SearchBox from "./searchBox";
 
 
+
 class Trips extends Component {
   state = {
     trips: [],
@@ -102,14 +103,14 @@ class Trips extends Component {
 
     return (
       <div className="row">
-        <div className="col-2">
+        <div className="col-2 sidenav">
           <ListGroup
             items={this.state.shifts}
             selectedItem={this.state.selectedShift}
             onItemSelect={this.handleShiftSelect}
           />
         </div>
-        <div className="col">
+        <div className="col content">
           {user && (
             <Link
               to="/trips/new"

@@ -1,12 +1,15 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import "../index.css";
+import "../App.css";
+import "./component.css"
 
 
 
 const NavBar = ({ user }) => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light" style={{ color: "#313941"}} >
-      <Link className="navbar-brand fa fa-cubes" style={{ color:"#EF8037", fontSize:30 }}  to="/">
+    <nav className="navbar topnav navbar-expand-lg navbar-light bg-light" style={{ color: "#313941"}} >
+      <Link className="navbar-brand active fa fa-cubes" style={{ color:"#EF8037", fontSize:30 }}  to="/">
         Shadow
       </Link>
       <button
@@ -20,7 +23,7 @@ const NavBar = ({ user }) => {
       >
         <span className="navbar-toggler-icon" />
       </button>
-      <div className="collapse navbar-collapse" id="navbarNavAltMarkup" >
+      <div className="collapse  topnav navbar-collapse" id="navbarNavAltMarkup" >
         <div className="navbar-nav" >
           {!user && (
             <React.Fragment>

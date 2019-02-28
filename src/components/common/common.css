@@ -1,0 +1,97 @@
+  .form-group{
+    width: 50%;
+    padding: 15px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: #313941;
+    color: rgb(235, 142, 80);
+    border: 3px solid white;
+  }
+ 
+  /* Table Final */
+  .table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    border-radius: 5px;
+    text-align: left;
+    background-color: #313941;
+    color: rgb(248, 123, 39);
+  }
+
+  .table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .table td, .table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .table tr:nth-child(even){background-color: #f2f2f2;}
+  
+  .table tr:hover {background-color: #ddd;}
+  /* Table Final End */
+
+  .list-group {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    border: 1px solid #555;
+  }
+  
+  .list-group-item .active {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+
+  
+.list-group-item {
+    text-align: center;
+    border-bottom: 1px solid #555;
+  }
+  
+.list-group-item:last-child {
+    border-bottom: none;
+  }
+  .list-group-item .active:hover:not(.active) {
+    background-color: #555;
+    color: white
+  }
+
+.fa-heart {
+      color: rgb(248, 123, 39);
+  }
+/* pagination Start */
+  .center {
+    text-align: center;
+  }
+  
+  .pagination {
+    display: inline-block;
+    text-decoration: none;
+  }
+  
+  .pagination li {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+  }
+ 
+  .pagination li.active {
+    background-color:  rgb(248, 123, 39);
+    color: white;
+    border: 1px solid  rgb(248, 123, 39);
+  }
+/* pagination Ends*/
