@@ -1,11 +1,10 @@
-  .tripForm{
+  .tripForm .registrationForm {
     font-size: 22px;
     padding: 8px 8px;
     margin: 8px 0;
     color: #313941;
     border: 5px solid rgb(235, 142, 80);
     width: 400px;
-
   }
  
   /* Table Final */

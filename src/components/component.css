@@ -7,7 +7,38 @@
     padding: 12px 12px 12px 0;
     display: inline-block;
   }
- 
+ /* Navbar */
+ .shadow {
+  text-decoration: none;
+  color:#EF8037; 
+  font-size:30px;
+ }
+/* ul */
+ .navbar-brand {
+  list-style-type: none;
+  margin: 0px;
+  padding: 20px;
+  background-color: #313941;
+  width: 100%;
+}
+/* li */
+ .navbar-nav { 
+  float:right;
+
+ }
+ /* li a */
+ .navbar-nav .nav-link{
+  display: inline-block;
+  color: #313941 !important;
+  text-align: center;
+  padding: 14px 16px;
+}
+
+/* li a:hover */
+.navbar-nav .nav-link:hover {
+  background-color:#EF8037;
+
+}
  
   /* FORM START */
   input, select {
@@ -25,12 +56,29 @@
     padding: 20px;
   }
   /* FORM END */
-
-  /* searchbar */
+  .form-group:nth-child(1) {
+    display: inline-block;
+    width:50%;
+    padding: 8px 10px;
+  }
+  .form-group:nth-child(2) {
+    display: inline-block;
+    width:50%;
+    padding: 8px 10px;
+  }
   .form-control {
     border: 2px solid #EF8037; 
     font-size: 18px;
     }
+
+  /* searchbar */
+  .searchBar {
+    border: 2px solid #EF8037; 
+    font-size: 18px;
+    }
+  #block1, #block2 {
+    display: inline-block;
+  };
 
 /* Layout Start */
 .sidenav {
@@ -45,7 +93,7 @@
 }
 
 /* Style the content */
-.content {
+.content  {
   margin-left: 200px;
   padding-left: 20px;
   display: inline;

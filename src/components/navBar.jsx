@@ -8,11 +8,11 @@ import "./component.css"
 
 const NavBar = ({ user }) => {
   return (
-    <nav className="navbar topnav navbar-expand-lg navbar-light bg-light" style={{ color: "#313941"}} >
-      <Link className="navbar-brand active fa fa-cubes" style={{ color:"#EF8037", fontSize:30 }}  to="/">
+    <nav className="navbar navbar-brand topnav navbar-expand-lg navbar-light bg-light" style={{ color: "#313941"}} >
+      <Link className=" shadow fa fa-cubes" to="/">
         Shadow
       </Link>
-      <button
+      {/* <button
         className="navbar-toggler"
         type="button"
         data-toggle="collapse"
@@ -22,8 +22,7 @@ const NavBar = ({ user }) => {
         aria-label="Toggle navigation"
       >
         <span className="navbar-toggler-icon" />
-      </button>
-      <div className="collapse  topnav navbar-collapse" id="navbarNavAltMarkup" >
+      </button> */}
         <div className="navbar-nav" >
           {!user && (
             <React.Fragment>
@@ -49,7 +48,6 @@ const NavBar = ({ user }) => {
             </React.Fragment>
           )}
         </div>
-      </div>
     </nav>
   );
 };
