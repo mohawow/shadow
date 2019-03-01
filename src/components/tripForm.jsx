@@ -6,13 +6,13 @@ import { getShifts } from "../services/shiftService";
 
 function convertTo12Hour(oldFormatTime) {
   console.log("oldFormatTime: " + oldFormatTime);
-  var oldFormatTimeArray = oldFormatTime.split(":");
+  let oldFormatTimeArray = oldFormatTime.split(":");
 
-  var HH = parseInt(oldFormatTimeArray[0]);
-  var min = oldFormatTimeArray[1];
+  let HH = parseInt(oldFormatTimeArray[0]);
+  let min = oldFormatTimeArray[1];
 
-  var AMPM = HH >= 12 ? "PM" : "AM";
-  var hours;
+  let AMPM = HH >= 12 ? "PM" : "AM";
+  let hours;
   if(HH == 0){
     hours = HH + 12;
   } else if (HH > 12) {
@@ -25,15 +25,13 @@ function convertTo12Hour(oldFormatTime) {
   return newFormatTime;
 }
 
-function convertBack(time) {
-
-  const AMorPM = time.slice(-2);
-  const time = time.slice(0, time.length - 2);
-  return AMORPM === 'AM' ? time : +(parseInt(time, 10) + 12);
-
+function convertBack(timeBlock) {
+  let AMORPM;
+  const AMorPM = timeBlock.slice(-2);
+  const time = AMorPM.slice(0, time.length - 2);
+  AMORPM === 'AM' ? time : +(parseInt(time, 10) + 12);
+  return AMORPM
 }
-
-
 
 
 class TripForm extends Form {
@@ -121,7 +119,6 @@ class TripForm extends Form {
 
     return {
       _id: trip._id,
-      // 12:00AM - 1:00PM
       block1,   
       block2,
       date: trip.date,
