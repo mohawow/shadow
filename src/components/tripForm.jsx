@@ -5,7 +5,7 @@ import { getTrip, saveTrip } from "../services/tripService";
 import { getShifts } from "../services/shiftService";
 
 function convertTo12Hour(oldFormatTime) {
-  // console.log("oldFormatTime: " + oldFormatTime);
+  console.log("oldFormatTime: " + oldFormatTime);
   let oldFormatTimeArray = oldFormatTime.split(":");
 
   let HH = parseInt(oldFormatTimeArray[0]);
@@ -35,7 +35,7 @@ function convertBack(timeBlock) { // 12:20 PM
   
   const time = timeBlock.slice(0, timeBlock.length - 2);
   console.log("time,", time);
-  return AMorPM === 'AM' ? time : `${(parseInt(time, 10) + 12)}:${mins}`;
+  return AMorPM === 'AM' ? `0${time}` : `${(parseInt(time, 10) + 12)}:${mins}`;
   
 }
 
@@ -149,7 +149,7 @@ class TripForm extends Form {
       block2
     )}`;
     // console.log("Formatted: ", formattedTime);
-    const tripInfo = { ...rest, block: formattedTime };
+    const tripInfo = { ...rest, block: formattedTime, userId: this.props.user._id  };
     try {
       await saveTrip(tripInfo);
       this.props.history.push("/trips");
@@ -160,9 +160,10 @@ class TripForm extends Form {
 
   render() {
     console.log('state: ', this.state.data);
+    console.log('does user in my trip form exist??', this.props.user);
     return (
       <div>
-        <h1>Trip Form</h1>
+        <h1 className="tripHeader">Trip Form</h1>
         <form onSubmit={this.handleSubmit} className="tripForm">
           {this.renderInput("block1", "From", "time", "block1")}
           {this.renderInput("block2", "To", "time", "block2")}

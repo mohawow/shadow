@@ -3,11 +3,11 @@ import http from "./httpService";
 const apiEndpoint = "/trips";
 
 function tripUrl(id) {
-  return `${apiEndpoint}/${id}`;
+  return `${apiEndpoint}/trip/${id}`;
 }
 
-export function getTrips() {
-  return http.get(apiEndpoint);
+export function getTrips(userId) {
+  return http.get(`${apiEndpoint}/${userId}`);
 }
 
 export function getTrip(tripId) {

@@ -21,7 +21,7 @@ class TripsTable extends Component {
     let user = auth.getCurrentUser();
     if (user) {
 
-
+      this.setState({user});
     }
     
     
@@ -65,24 +65,19 @@ class TripsTable extends Component {
     console.log('my user in the trip table: ', this.state.user);
     const { trips, onSort, sortColumn } = this.props;
     return (
-      <div> hi
+      <div class="col content"> 
     
-        {/* {Object.keys(this.state.user).length === 0 ? 
-          <Table
-            columns={this.columns}
-            data={trips}
-            sortColumn={sortColumn}
-            onSort={onSort}
-          />
+        {Object.keys(this.state.user).length === 0 ? 
+          <h1> Nothing to display cause you're not logged in </h1>
           :
           <Table
-            columns={{...this.columns, ...this.deleteColumn }}
+            columns={[...this.columns, this.deleteColumn ]}
             data={trips}
             sortColumn={sortColumn}
             onSort={onSort}
           />
 
-        } */}
+        }
       </div>
 
       

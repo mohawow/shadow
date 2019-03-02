@@ -9,3 +9,30 @@ body {
   cursor: pointer;
 }
 
+.something {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  .something {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .navbar {
+    width: 800px !important;
+  }
+
+  .tripForm {
+    width: 100% !important;
+  }
+
+ 
+
+}
+

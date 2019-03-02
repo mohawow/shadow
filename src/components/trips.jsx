@@ -27,7 +27,7 @@ class Trips extends Component {
     const { data } = await getShifts();
     const shifts = [{ _id: "", name: "All Shifts" }, ...data];
 
-    const { data: trips } = await getTrips();
+    const { data: trips } = await getTrips(this.props.user._id);
     this.setState({ trips, shifts });
   }
 
@@ -102,26 +102,25 @@ class Trips extends Component {
     const { totalCount, data: trips } = this.getPagedData();
 
     return (
-      <div className="row">
+      <div className="something">
         <div className="col-2 sidenav">
           <ListGroup
             items={this.state.shifts}
             selectedItem={this.state.selectedShift}
             onItemSelect={this.handleShiftSelect}
           />
-        </div>
-        <div className="col content">
           {user && (
             <Link
               to="/trips/new"
-              className="btn btn-primary"
-              style={{ marginBottom: 18 }}
+              className="btn btn-primary newTripButton"
+              // style={{ marginTOp: 18 }}
             >
               New Trip
             </Link>
           )}
           <p>Showing {totalCount} trips in the database.</p>
           <SearchBox value={searchQuery} onChange={this.handleSearch} />
+        </div>
           <TripsTable
             trips={trips}
             sortColumn={sortColumn}
@@ -135,7 +134,7 @@ class Trips extends Component {
             currentPage={currentPage}
             onPageChange={this.handlePageChange}
           />
-        </div>
+      
       </div>
     );
   }

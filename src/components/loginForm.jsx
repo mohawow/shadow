@@ -40,8 +40,9 @@ class LoginForm extends Form {
 
     return (
       <div>
-        <h1>Login</h1>
-        <form onSubmit={this.handleSubmit}>
+        <h1 className="tripHeader">Login</h1>
+        <p className="tripHeader"> Lorem, ipsum.</p>
+        <form className="tripForm" onSubmit={this.handleSubmit}>
           {this.renderInput("username", "Username")}
           {this.renderInput("password", "Password", "password")}
           {this.renderButton("Login")}

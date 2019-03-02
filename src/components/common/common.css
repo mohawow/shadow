@@ -1,10 +1,25 @@
   .tripForm .registrationForm {
     font-size: 22px;
     padding: 8px 8px;
-    margin: 8px 0;
+    margin: 8px auto;
     color: #313941;
     border: 5px solid rgb(235, 142, 80);
-    width: 400px;
+    width: 60%;
+    
+  }
+
+  .tripForm {
+    font-size: 22px;
+    padding: 8px 8px;
+    margin: 8px auto;
+    color: #313941;
+    border: 5px solid rgb(235, 142, 80);
+    width: 60%;
+
+  }
+
+  .tripHeader {
+    text-align: center;
   }
  
   /* Table Final */
@@ -38,9 +53,9 @@
 
   .list-group {
     list-style-type: none;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
-    width: 200px;
+    width: 100%;
     background-color: #f1f1f1;
     border: 1px solid #555;
   }

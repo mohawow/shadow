@@ -29,9 +29,9 @@ const NavBar = ({ user }) => {
               <NavLink className="nav-item nav-link  fa fa-sign-in" style={{ fontSize:18 }}  to="/login">
                 Login
               </NavLink>
-              <NavLink className="nav-item nav-link fa fa-registered" style={{ fontSize:18 }} to="/register">
+              <Link className="nav-item nav-link fa fa-registered" style={{ fontSize:18 }} to="/register">
                 Register
-              </NavLink>
+              </Link>
             </React.Fragment>
           )}
           {user && (
