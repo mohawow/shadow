@@ -65,7 +65,7 @@ class TripsTable extends Component {
     console.log('my user in the trip table: ', this.state.user);
     const { trips, onSort, sortColumn } = this.props;
     return (
-      <div class="col content"> 
+      <div className="col content"> 
     
         {Object.keys(this.state.user).length === 0 ? 
           <h1> Nothing to display cause you're not logged in </h1>
