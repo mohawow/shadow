@@ -7,6 +7,26 @@ import Like from "./common/like";
 
 
 class TripsTable extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      user: {}
+    }
+    // if (user && user.isAdmin) this.columns.push(this.deleteColumn);
+  }
+
+  componentDidMount() {
+    console.log("Initiated:", auth.getCurrentUser());
+    let user = auth.getCurrentUser();
+    if (user) {
+
+
+    }
+    
+    
+  }
+
   columns = [
     {
       path: "block",
@@ -40,22 +60,35 @@ class TripsTable extends Component {
     )
   };
 
-  constructor() {
-    super();
-    const user = auth.getCurrentUser();
-    if (user ) this.columns.push(this.deleteColumn);
-  }
 
   render() {
+    console.log('my user in the trip table: ', this.state.user);
     const { trips, onSort, sortColumn } = this.props;
     return (
-        <Table
-          columns={this.columns}
-          data={trips}
-          sortColumn={sortColumn}
-          onSort={onSort}
-        />
+      <div> hi
+    
+        {/* {Object.keys(this.state.user).length === 0 ? 
+          <Table
+            columns={this.columns}
+            data={trips}
+            sortColumn={sortColumn}
+            onSort={onSort}
+          />
+          :
+          <Table
+            columns={{...this.columns, ...this.deleteColumn }}
+            data={trips}
+            sortColumn={sortColumn}
+            onSort={onSort}
+          />
+
+        } */}
+      </div>
+
+      
+      
     );
+        
   }
 }
 

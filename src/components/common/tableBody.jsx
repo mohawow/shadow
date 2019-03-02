@@ -4,10 +4,10 @@ import _ from "lodash";
 class TableBody extends Component {
   renderCell = (item, column) => {
     let tableData;
-    console.log('Item: ', item);
-    console.log('Column: ', column)
+    // console.log('Item: ', item);
+    // console.log('Column: ', column)
     if (column.content) return column.content(item);
-    console.log("_get: ", _.get(item, column.path));
+    // console.log("_get: ", _.get(item, column.path));
     if (column.path === 'tips' && item.finalPay) {
       tableData = item.finalPay - item.initialPay;
     } else if (column.path === 'tips' && !item.finalPay) {
@@ -25,8 +25,8 @@ class TableBody extends Component {
 
   render() {
     const { data, columns } = this.props;
-    console.log('Data: ', data)
-    console.log('Column: ', columns);
+    // console.log('Data: ', data)
+    // console.log('Column: ', columns);
     return (
       <tbody>
         {data.map(item => (

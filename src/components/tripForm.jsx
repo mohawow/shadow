@@ -5,7 +5,7 @@ import { getTrip, saveTrip } from "../services/tripService";
 import { getShifts } from "../services/shiftService";
 
 function convertTo12Hour(oldFormatTime) {
-  console.log("oldFormatTime: " + oldFormatTime);
+  // console.log("oldFormatTime: " + oldFormatTime);
   let oldFormatTimeArray = oldFormatTime.split(":");
 
   let HH = parseInt(oldFormatTimeArray[0]);
@@ -13,7 +13,7 @@ function convertTo12Hour(oldFormatTime) {
 
   let AMPM = HH >= 12 ? "PM" : "AM";
   let hours;
-  if(HH == 0){
+  if(HH === 0){
     hours = HH + 12;
   } else if (HH > 12) {
     hours = HH - 12;
@@ -21,16 +21,22 @@ function convertTo12Hour(oldFormatTime) {
     hours = HH;
   }
   var newFormatTime = hours + ":" + min + AMPM;
-  console.log('new format time: ', newFormatTime);
+  // console.log('new format time: ', newFormatTime);
   return newFormatTime;
 }
 
-function convertBack(timeBlock) {
-  let AMORPM;
-  const AMorPM = timeBlock.slice(-2);
-  const time = AMorPM.slice(0, time.length - 2);
-  AMORPM === 'AM' ? time : +(parseInt(time, 10) + 12);
-  return AMORPM
+function convertBack(timeBlock) { // 12:20 PM
+  
+  console.log('Time block: ', timeBlock);
+  const AMorPM = timeBlock.substring(timeBlock.length - 2, timeBlock.length);
+  console.log('AMORPM: ', AMorPM);
+  const [hours, mins] = timeBlock.substring(0, timeBlock.length - 2).split(':')
+  console.log('hours, mins: ', hours, mins);
+  
+  const time = timeBlock.slice(0, timeBlock.length - 2);
+  console.log("time,", time);
+  return AMorPM === 'AM' ? time : `${(parseInt(time, 10) + 12)}:${mins}`;
+  
 }
 
 
@@ -111,12 +117,13 @@ class TripForm extends Form {
   }
 
   mapToViewModel(trip) {
-    const convertFormattedToOriginal = trip.block.split(' - ');   // [12:00AM,1:00PM]
-    
-    let block1 = convertBack(convertFormattedToOriginal[0])
-    let block2 = convertBack(convertFormattedToOriginal[1]);
+    const [to, from] = trip.block.split(' - ');  
+    console.log('formatted time', to, from) // [12:00AM,1:00PM]
+    console.log('trip info: ', trip);
+    let block1 = convertBack(to);
+    let block2 = convertBack(from);
     console.log('Block1, block2: ', block1, block2);
-
+    
     return {
       _id: trip._id,
       block1,   
@@ -127,8 +134,8 @@ class TripForm extends Form {
       numberOfStops: trip.numberOfStops,
       initialPay: trip.initialPay,
       finalPay: trip.finalPay,
-      tips: trip.tips
     };
+
   }
 
   doSubmit = async () => {
@@ -141,7 +148,7 @@ class TripForm extends Form {
     const formattedTime = `${convertTo12Hour(block1)} - ${convertTo12Hour(
       block2
     )}`;
-    console.log("Formatted: ", formattedTime);
+    // console.log("Formatted: ", formattedTime);
     const tripInfo = { ...rest, block: formattedTime };
     try {
       await saveTrip(tripInfo);
@@ -152,6 +159,7 @@ class TripForm extends Form {
   };
 
   render() {
+    console.log('state: ', this.state.data);
     return (
       <div>
         <h1>Trip Form</h1>
