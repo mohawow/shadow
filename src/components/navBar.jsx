@@ -8,11 +8,11 @@ import "./component.css"
 
 const NavBar = ({ user }) => {
   return (
-    <nav className="navbar navbar-brand topnav navbar-expand-lg navbar-light bg-light" style={{ color: "#313941"}} >
+    <nav className="navbar navbar-brand topnav navbar-expand-lg navbar-light bg-light" style={{ fontSize:36, color: "#313941"}} >
       <Link className=" shadow fa fa-cubes" to="/">
         Shadow
       </Link>
-      {/* <button
+      <button
         className="navbar-toggler"
         type="button"
         data-toggle="collapse"
@@ -22,27 +22,27 @@ const NavBar = ({ user }) => {
         aria-label="Toggle navigation"
       >
         <span className="navbar-toggler-icon" />
-      </button> */}
+      </button>
         <div className="navbar-nav" >
           {!user && (
             <React.Fragment>
-              <NavLink className="nav-item nav-link  fa fa-sign-in" style={{ fontSize:18 }}  to="/login">
+              <NavLink className="nav-item nav-link  fa fa-sign-in" style={{ fontSize:26 }}  to="/login">
                 Login
               </NavLink>
-              <Link className="nav-item nav-link fa fa-registered" style={{ fontSize:18 }} to="/register">
+              <Link className="nav-item nav-link fa fa-registered" style={{ fontSize:26 }} to="/register">
                 Register
               </Link>
             </React.Fragment>
           )}
           {user && (
             <React.Fragment>
-              <NavLink className="nav-item nav-link fa fa-automobile" style={{ fontSize:18 }} to="/trips">
+              <NavLink className="nav-item nav-link fa fa-automobile" style={{ fontSize:26 }} to="/trips">
                 Trips
              </NavLink>
-              <NavLink className="nav-item nav-link fa fa-user" style={{ fontSize:18 }} to="/profile">
+              <NavLink className="nav-item nav-link fa fa-user" style={{ fontSize:26 }} to="/profile">
                 {user.name}
               </NavLink>
-              <NavLink className="nav-item nav-link fa fa-sign-out" style={{ fontSize:18 }} to="/logout">
+              <NavLink className="nav-item nav-link fa fa-sign-out" style={{ fontSize:26 }} to="/logout">
                 Logout
               </NavLink>
             </React.Fragment>

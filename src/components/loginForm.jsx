@@ -2,6 +2,7 @@ import React from "react";
 import { Redirect } from "react-router-dom";
 import Joi from "joi-browser";
 import Form from "./common/form";
+// import  "./package-delivery.png";
 import auth from "../services/authService";
 
 class LoginForm extends Form {
@@ -39,9 +40,10 @@ class LoginForm extends Form {
     if (auth.getCurrentUser()) return <Redirect to="/" />;
 
     return (
-      <div>
-        <h1 className="tripHeader">Login</h1>
+      <div className="tripImage">
         <p className="tripHeader"> Lorem, ipsum.</p>
+        {/* <img src={require('./package-delivery.png')} className="tripImage" alt="background Image"/> */}
+        <h1 className="tripHeader">Login</h1>
         <form className="tripForm" onSubmit={this.handleSubmit}>
           {this.renderInput("username", "Username")}
           {this.renderInput("password", "Password", "password")}

@@ -1,4 +1,4 @@
-  .tripForm .registrationForm {
+  .registrationForm {
     font-size: 22px;
     padding: 8px 8px;
     margin: 8px auto;
@@ -20,6 +20,7 @@
 
   .tripHeader {
     text-align: center;
+
   }
  
   /* Table Final */

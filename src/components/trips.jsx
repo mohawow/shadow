@@ -17,7 +17,7 @@ class Trips extends Component {
     trips: [],
     shifts: [],
     currentPage: 1,
-    pageSize: 6,
+    pageSize: 4,
     searchQuery: "",
     selectedShift: null,
     sortColumn: { path: "block", order: "asc" }
@@ -102,7 +102,7 @@ class Trips extends Component {
     const { totalCount, data: trips } = this.getPagedData();
 
     return (
-      <div className="something">
+      <div className="something tripTest">
         <div className="col-2 sidenav">
           <ListGroup
             items={this.state.shifts}

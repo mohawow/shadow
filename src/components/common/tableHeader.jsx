@@ -23,7 +23,7 @@ class TableHeader extends Component {
 
   render() {
     return (
-      <thead>
+      <thead className="tableHeaderTest">
         <tr>
           {this.props.columns.map(column => (
             <th

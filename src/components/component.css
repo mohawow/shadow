@@ -24,11 +24,14 @@
 /* li */
  .navbar-nav { 
   float:right;
-
+ }
+ a.nav-item {
+  font-size:30px;
  }
  /* li a */
  .navbar-nav .nav-link{
   display: inline-block;
+  text-decoration: none;
   color: #313941 !important;
   text-align: center;
   padding: 14px 16px;
@@ -37,6 +40,7 @@
 /* li a:hover */
 .navbar-nav .nav-link:hover {
   background-color:#EF8037;
+
 
 }
  
@@ -80,7 +84,9 @@
     display: inline-block;
   };
 
-
+.tripImage {
+  background-image:url(../public/package-delivery.png)
+}
 
 /* Layout Start */
 
@@ -92,21 +98,8 @@
 .sidenav {
   width: 100%;
   background-color: white;
-  /* float:left; */
-  /* padding: 15px;
-  margin-right: 200px;
-  padding-right: 20px; */
- 
-
 }
 
-/* Style the content */
-.content  {
-  /* margin-left: 200px;
-  padding-left: 20px;
-  display: inline; */
-}
-/* Layout finish */
 
 
 /* button New Trip */
