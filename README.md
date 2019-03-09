@@ -1,8 +1,8 @@
 # [Shadow](https://road-rate-client.herokuapp.com/)
 <div align="center">
-  <img src="./src/assets/loginPage.png" alt="login Page" width="800px">
+  <img src="./src/assets/login.png" alt="login Page" width="800px">
 </div>
-<p align="center">Shadow </p>
+<p align="center">Shadow is web application service that help Amazon drivers track thier trips. </p>
 
 ## Why Shadow?
 **Thousands of Amazon drivers are unable to view thier past/ historical trips, but more importantly they are unable to tell how much exactly they made before and after tips, how much stops they made**
@@ -34,6 +34,7 @@ Shadow is web application service that help Amazon drivers to track thier trips.
 **Trip Data Means:**
 [Date, time, shift, number of packages, number of Stops, inital pay, final pay, tips ]
 
+## App Features
 **Registered Users:** 
 - Registered users can "add" all trips data. 
 - Registered users can "view" all trips data.
@@ -47,13 +48,13 @@ Shadow is web application service that help Amazon drivers to track thier trips.
 - Registered users can view thier automatically calcualted tips. 
 
 
-## V2 Features future Plans 
+**V2 future Plans** 
 - Log time automatically  upon login.
 - Calculate Milage upon login to app and log out. 
 - Chart report that shows meaning visual data ex. Chart.js 
 - Community forums.
 
-## Tech Stack
+## Full-Stack
 **Front End:** 
   - Create React App
   - React
@@ -77,11 +78,11 @@ Shadow is web application service that help Amazon drivers to track thier trips.
   - Enzyme 
 
 ## App Screenshots
-<p align="center">Login Page </p>
-<img src='./src/assets/loginPage.png' alt='loginPage' width='800px'/>
-<p align="center">Registration Page </p>
+<h2 align="center">Login Page </h2>
+<img src='./src/assets/login.png' alt='loginPage' width='800px'/>
+<h2 align="center">Registration Page </h2>
 <img src='./src/assets/registeration.png' alt='registeration Page' width='800px'/>
-<p align="center">Dashboard </p>
+<h2 align="center">Dashboard </h2>
 <img src='./src/assets/dashboard.png' alt='dashboard' width='800px'/>
-<p align="center">Adding new Trip </p>
+<h2 align="center">Adding new Trip </h2>
 <img src='./src/assets/tripForm.png' alt='Trip Form' width='800px'/>
