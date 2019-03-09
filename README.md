@@ -22,15 +22,13 @@ Shadow is web application service that help Amazon drivers to track thier trips.
 - [Server Repo](https://github.com/mohawow/shadow-api-node)
 
 
-## ScreenShot
-<img src='./src/assets/dashboard.png' alt='dashboard' width='300px'/>
-
 **All Users:**
 - Landing page with background info and login/registration navbar.
 - User Registration and Login forms are /Auth/ using jwt authToken and Joi validation. 
+
 **Demo User:**
- DEMO USERNAME: user1@domain.com
- PASSWORD: user1
+- DEMO USERNAME: user1@domain.com
+- PASSWORD: user1
 
 
 **Trip Data Means:**
@@ -78,9 +76,12 @@ Shadow is web application service that help Amazon drivers to track thier trips.
   - Jest
   - Enzyme 
 
-## App Images
-
+## App Screenshots
+<p align="center">Login Page </p>
 <img src='./src/assets/loginPage.png' alt='loginPage' width='800px'/>
+<p align="center">Registration Page </p>
 <img src='./src/assets/registeration.png' alt='registeration Page' width='800px'/>
+<p align="center">Dashboard </p>
 <img src='./src/assets/dashboard.png' alt='dashboard' width='800px'/>
+<p align="center">Adding new Trip </p>
 <img src='./src/assets/tripForm.png' alt='Trip Form' width='800px'/>

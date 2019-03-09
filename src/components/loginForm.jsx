@@ -40,7 +40,7 @@ class LoginForm extends Form {
 
     return (
       <div className="tripImage">
-        <h2 className="tripHeader"> Shadow is web application service that help Amazon drivers to track thier trips</h2>   
+        <h1 className="tripHeader"> Shadow is web application service that help Amazon drivers to track thier trips</h1>   
         <ol className="homePageList">
           <li>- Store and view your historical data</li>
           <li>- Tips get calulated automatically</li>
