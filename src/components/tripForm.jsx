@@ -21,11 +21,11 @@ function convertTo12Hour(oldFormatTime) {
     hours = HH;
   }
   var newFormatTime = hours + ":" + min + AMPM;
-  // console.log('new format time: ', newFormatTime);
+
   return newFormatTime;
 }
 
-function convertBack(timeBlock) { // 12:20 PM
+function convertBack(timeBlock) { 
   
   console.log('Time block: ', timeBlock);
   const AMorPM = timeBlock.substring(timeBlock.length - 2, timeBlock.length);

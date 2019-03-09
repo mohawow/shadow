@@ -7,22 +7,41 @@
     width: 60%;
     
   }
-
+  .tripImage {
+    background-image: url('../../package-delivery.png');
+    text-shadow: 2px 2px 12px white;
+    filter: brightness(90%);
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    background-size: cover;
+    text-align: center;  
+  }
+  .tripHeader{
+    color: black;
+  }
+  .homePageList{
+    list-style-type: none;
+    
+    font-size: 24px;
+    font-family:proxima-nova, sans-serif !important;
+    font-style: normal;
+    font-size: 16px;
+    font-weight:800;
+    letter-spacing: 3px;
+    color: #231f20;
+    text-transform: uppercase;
+    line-height: 1.5em;
+  }
   .tripForm {
     font-size: 22px;
     padding: 8px 8px;
     margin: 8px auto;
     color: #313941;
-    border: 5px solid rgb(235, 142, 80);
+    border: 5px solid rgb(235, 142, 80); 
     width: 60%;
-
-  }
-
-  .tripHeader {
-    text-align: center;
-
   }
  
+
   /* Table Final */
   .table th {
     padding-top: 12px;

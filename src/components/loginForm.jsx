@@ -40,9 +40,15 @@ class LoginForm extends Form {
 
     return (
       <div className="tripImage">
-        <p className="tripHeader"> Lorem, ipsum.</p>
-        {/* <img src={require('./package-delivery.png')} className="tripImage" alt="background Image"/> */}
-        <h1 className="tripHeader">Login</h1>
+        <h2 className="tripHeader"> Shadow is web appliction service that help Amazon Felx drivers to track thier trips</h2>   
+        <ol className="homePageList">
+          <li>Store and view your historical data</li>
+          <li>Tips get calulated automatically</li>
+          <li>Search, add, delete, update and sort your trips</li>
+        </ol> 
+        <p><strong>For Demo:</strong></p>
+        <p>Username: user1@domain.com | Password: user1</p>
+        <h1 className="login">Login</h1>
         <form className="tripForm" onSubmit={this.handleSubmit}>
           {this.renderInput("username", "Username")}
           {this.renderInput("password", "Password", "password")}
