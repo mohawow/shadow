@@ -10,4 +10,4 @@ const localStorageMock = {
 };
 
 global.localStorage = localStorageMock;
-// global.XMLHttpRequest = undefined;
+global.XMLHttpRequest = undefined;

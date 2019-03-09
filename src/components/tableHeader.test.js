@@ -10,7 +10,6 @@ describe('trip', () => {
             { path: '', label: '', key: 3},
         ]
         const sortColumn = {path: '', order: ''}
-
         
         const component = shallow(<TableHeader columns={mockColumns} sortColumn={sortColumn}/>); 
         expect(component.find('.tableHeaderTest')).toHaveLength(1);
