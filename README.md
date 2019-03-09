@@ -48,7 +48,7 @@ Shadow is web application service that help Amazon drivers to track thier trips.
 - Registered users can view thier automatically calcualted tips. 
 
 
-**V2 future Plans** 
+**V2 futur Plans** 
 - Log time automatically  upon login.
 - Calculate Milage upon login to app and log out. 
 - Chart report that shows meaning visual data ex. Chart.js 
