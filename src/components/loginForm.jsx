@@ -40,11 +40,11 @@ class LoginForm extends Form {
 
     return (
       <div className="tripImage">
-        <h2 className="tripHeader"> Shadow is web appliction service that help Amazon Felx drivers to track thier trips</h2>   
+        <h2 className="tripHeader"> Shadow is web application service that help Amazon drivers to track thier trips</h2>   
         <ol className="homePageList">
-          <li>Store and view your historical data</li>
-          <li>Tips get calulated automatically</li>
-          <li>Search, add, delete, update and sort your trips</li>
+          <li>- Store and view your historical data</li>
+          <li>- Tips get calulated automatically</li>
+          <li>- Search, add, delete, update and sort your trips</li>
         </ol> 
         <p><strong>For Demo:</strong></p>
         <p>Username: user1@domain.com | Password: user1</p>
