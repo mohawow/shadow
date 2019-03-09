@@ -2,18 +2,18 @@
 <div align="center">
   <img src="./src/assets/login.png" alt="login Page" width="800px">
 </div>
-<p align="center">Shadow is web application service that help Amazon drivers track thier trips. </p>
+<p align="center">Shadow is web application service that help Amazon drivers track their trips. </p>
 
 ## Why Shadow?
-**Thousands of Amazon drivers are unable to view thier past/ historical trips, but more importantly they are unable to tell how much exactly they made before and after tips, how much stops they made**
+**Thousands of Amazon drivers are unable to view their past/ historical trips, but more importantly they are unable to tell how much exactly they made before and after tips, how much stops they made**
 
 
 ## What is Shadow?
-Shadow is web application service that help Amazon drivers to track thier trips. 
+Shadow is web application service that help Amazon drivers to track their trips. 
 
-- STORE AND VIEW YOUR HISTORICAL DATA
-- TIPS GET CALULATED AUTOMATICALLY
-- SEARCH, ADD, DELETE, UPDATE AND SORT YOUR TRIPS
+- STORE AND VIEW THEIR HISTORICAL DATA
+-  CALCULATE TIPS  AUTOMATICALLY
+- SEARCH, ADD, DELETE, UPDATE AND SORT THEIR TRIPS
 
 ## Heroku Live App
 - [Deployed Client](https://limitless-beach-69771.herokuapp.com)
@@ -45,7 +45,7 @@ Shadow is web application service that help Amazon drivers to track thier trips.
 - Registered users can "select" filter by shift. 
 - Registered users can "favor" certain row. 
 - Registered users can use pagination feature when they reach 4 rows per page to view more trips. 
-- Registered users can view thier automatically calcualted tips. 
+- Registered users can view their automatically calcualted tips. 
 
 
 **V2 futur Plans** 
